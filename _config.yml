@@ -1,0 +1,17 @@
+# Site settings
+title: 滑客官网|多屏合一|看电视购物工具|湖南滑客网络科技有限公司
+email: 
+description: > # this means to ignore newlines until "baseurl:"
+  滑客官网|多屏合一|看电视购物工具|湖南滑客网络科技有限公司
+baseurl: "" # the subpath of your site, e.g. /blog/
+imgurl: "/style/images"
+jsurl: "/style/js"
+cssurl: "/css"
+jquery: "/bower_components/jquery/dist/jquery.min.js"
+bs: "/bower_components/bootstrap/dist"
+url: "http://huako.cn" # the base hostname & protocol for your site
+copyright: "Copyright  ©  2015  www.huako.cn  湖南滑客网络科技有限公司   版权所有"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge

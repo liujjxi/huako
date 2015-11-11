@@ -1,0 +1,79 @@
+---
+layout: default
+title: 企业风采
+permalink: /about/
+banner: banner02
+---
+
+<div class="about">
+  <!-- 关于滑客 -->
+  <div class="intr">
+    <div class="wrapper">
+      <div class="title text-center">
+        <h1 class="line"><span class="en">company profiles</span><br>企业简介</h1>
+      </div> 
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div class="jumbotron">
+            <h2 class="redColor">湖南滑客网络科技有限公司</h2>
+            <p>湖南滑客网络科技有限公司隶属于新三板上市企业湖南众益传媒有限公司（证券代码 831882）、是专注移动互联网领域研发与运营的一家高新技术企业。公司核心团队由一群退伍军人组成，一群保家卫国的退伍军人、心怀梦想的移动互联网从业者，一群有情怀的人凑在一起，想做成一件有情怀的事情。</p>
+            <p><a class="btn btn-red" href="#" role="button">more ></a></p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <img src="{{site.imgurl}}/aboutImg.png" alt="" class="img-responsive">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 企业文化 -->
+  <div class="cultrue">
+    <div class="wrapper">
+      <div class="title text-center">
+        <h1><span class="en">corporate culture</span><br>企业文化</h1>
+      </div> 
+      <div class="row">
+      {% for x in (1..5) %}
+        <div class="col2">
+        	<dl>
+        		<dt><span>比</span>是基础</dt>
+        		<dd>
+							同标杆比<br>
+							找出差距<br>
+							差距就是矛盾<br>
+							敢于揭露工作中的矛盾
+        		</dd>
+        	</dl>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+  <!-- 团队风采 -->
+  <div class="team">
+    <div class="wrapper">
+      <div class="title text-center">
+        <h1 class="line"><span class="en">team's mien</span><br>团队风采</h1>
+      </div> 
+      <div class="row">
+        <div class="col-md-12 ">
+          <h1 class="redColor">总裁介绍：</h1>
+          <p><strong>关键词：</strong>正直，睿智，健谈，执着</p>
+					<p><strong>创业诀窍：</strong>不忘初心，保持赤诚，加强学习，赢得成功。</p>
+					<p><strong>媒体报道：</strong>一个退伍老兵的“移动互联网+”</p>
+					<p>老兵，一个富有情怀的字眼，一个闯进“移动互联网”的老兵。湖南老兵周相宇，军人情怀已深入骨髓，其办公室军营印记随处可见。办公室内，“我的团长我的团”主题海报格外显眼。周相宇说，虽然走向社会，但军人本色不能丢。公司里，军营印记明显：会议室完全是军营指挥所的装扮，满眼橄榄绿，各式枪的模型、坦克模型、电台、五星红旗、承诺墙……酷似一座军营。公司还成立了“作战室”、党支部、工会、老兵俱乐部、退伍老兵实训基地。</p>
+					<p>周相宇说，特种部队六年，军人情怀已经深入到骨子里，现在只要一停下来，最怀念的就是和战友一起训练、一起生活的场景。</p>
+					<p>周相宇把这种情感也带到了公司管理上：公司40%以上必须是退伍军人，一是为退伍老兵建一个家，帮助更多老兵走向成功，二是军人踏实负责的态度是企业所需要的。“比、学、赶、帮、超”是企业文化的精髓，强化对结果负责的意识，强化诚信意识，每周进行批评与自我批评。这些看似严酷的管理制度让整个公司条理清楚，运行顺畅。</p>
+					<p>周相宇说，一名退伍军人从相对封闭的军营走向社会，军人的本色不能丢，要敢想敢干，只有去闯才知道社会究竟是怎样的，即使失败，也是值得的。军营与社会反差很大，面对各种诱惑要保持一颗本心，诚信做人是第一位的，部队培养出来的执行力、诚实、肯干等宝贵品质是社会最需要的。</p>   
+        </div>
+      </div>
+    </div>
+    <div class="row teamImg">
+    {% for x in (1..8) %}
+    	<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+    		<img src="{{site.imgurl}}/aboutImg0{{x}}.png" alt="" class="img-responsive">
+    	</div>
+  	{% endfor %}
+    </div>
+  </div>
+</div>

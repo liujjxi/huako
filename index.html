@@ -1,0 +1,81 @@
+---
+layout: default
+title: 首页
+banner: banner01
+---
+
+<div class="home">
+  <!-- 产品介绍 -->
+  <div class="pro text-center">
+    <div class="wrapper">
+      <div class="title o0">
+        <h1><span class="en">introduction to products</span><br>产品介绍</h1>
+      </div> 
+      <div class="row list">
+      {% for x in (1..4) %}
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+          <a href="/pro" class="thumbnail o0">
+             <span class="icon"><img src="{{site.imgurl}}/icon0{{x}}.png" alt=""></span>
+             <h2 class="mb10">{% cycle 'group1':'免费商城','一句话新闻','在线竞拍','精美锁屏' %}</h2> 
+             <p>{% cycle 'group2':'积分商城里大量的实物商品','国内独创的一句新闻','通过最新技术开发的线上仿真竞拍','每天不断自动更新的精美壁纸' %}</p>
+          </a>
+        </div>
+      {%endfor%}
+      </div>
+    </div>
+  </div>
+  <!-- 关于滑客 -->
+  <div class="intr">
+    <div class="wrapper">
+      <div class="title o0 text-center">
+        <h1><span class="en">about  huako</span><br>关于滑客</h1>
+      </div> 
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div class="jumbotron">
+            <h2 class="mb10">湖南滑客网络科技有限公司</h2>
+            <p>湖南滑客网络科技有限公司隶属于新三板上市企业湖南众益传媒有限公司（证券代码 831882）、是专注移动互联网领域研发与运营的一家高新技术企业。公司核心团队由一群退伍军人组成，一群保家卫国的退伍军人、心怀梦想的移动互联网从业者，一群有情怀的人凑在一起，想做成一件有情怀的事情。</p>
+            <p><a class="btn btn-red" href="/about" role="button">more ></a></p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <img src="{{site.imgurl}}/aboutImg.png" alt="" class="img-responsive">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 滑客动态 -->
+  <div class="news">
+    <div class="wrapper">
+      <div class="title o0 text-center">
+        <h1><span class="en">huako news</span><br>滑客动态</h1>
+      </div> 
+      <div class="row line">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div class="lastNews o0">
+            <div class="date text-center"><span class="day">27</span>2015-10</div>
+            <img src="{{site.imgurl}}/newsImg01.png" alt="" class="img-responsive">
+            <h2 class="mb10">滑客微信公众号举办“寻找最美”</h2>
+            <p class="info mb10">一大早伙伴们喜悦而激动的心情荡漾开来，特殊的喜悦从早会开始。整齐的队伍，象征着全体伙伴的齐心一致。</p>
+            <p><a href="{{site.baseUrl}}/news/" class="btn btn-red">MORE > </a></p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div class="newsList o0">
+          {% for x in (1..3) %}
+            <a href="/news" class="media line">
+              <div class="media-left">
+                <div class="date"><span class="day">06</span><span>2015-06</span></div>
+              </div>
+              <div class="media-body">
+                <h2 class="media-heading">冬日的怒放——滑客上线</h2>
+                <p class="info">2014年12月21日，福马科技发展有限公司全体伙伴们呕心沥血的佳作——滑客，上线啦！这个值得纪念的特殊日子，成为福马创记……</p>
+              </div>
+            </a>
+          {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
