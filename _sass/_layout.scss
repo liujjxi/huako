@@ -75,7 +75,7 @@ d. Default Styles
             }
         }
         .site-nav{
-            padding-top: 1em;
+            padding-top: 1rem;
         }
     }
     // Positioning context for the mobile navigation icon
@@ -178,7 +178,7 @@ d. Default Styles
 }
 
 .footer-heading {
-    margin-bottom: 0;font-size:.75em;
+    margin-bottom: 0;font-size:12px;
 }
 
 .contact-list,
@@ -318,26 +318,35 @@ d. Default Styles
     // transition:all .2s;
 }
 %title{
-    font-size: 1.12em;
+    font-size: 18px;
     color: $grey-color;
     &.line{
-        padding-bottom: 1em;
+        padding-bottom: 1rem;
         border-bottom: 1px solid $grey-color-lighter;
     }
 }
-%greyBg{
+%inTwoLine{
+    display: -webkit-box !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break:break-all;
+
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+}
+.greyBg{
     background-color: $grey-color;
     color: #fff;
-    .title h1{
+    &.wrapper>.title h1{
         color: #fff;
     }
 }
 .btn-red{
-    padding: .5em 2em;
+    padding: .5em 2rem;
     background-color: $brand-color;
     color: #fff;border-radius: 0;text-transform: uppercase;
     &:hover{
-        color: #fff;
+        color: rgba(255,255,255,.5);
         @include transition(all .3s );
         background-color: darken($brand-color,15%);
     }
@@ -351,13 +360,13 @@ p{
 // home
 .home{
     .intr,.news,.pro{
-        padding-bottom: 3em;
+        padding-bottom: 3rem;
     }
     .intr,.news{
-        padding-top: 2em;
+        padding-top: 2rem;
     }
     @at-root .title h1{
-        margin-bottom: 4em;
+        margin-bottom: 4rem;
     }
     @at-root .title h1,.thumbnail h2{
         @extend %title;line-height: 1.5em;
@@ -367,7 +376,7 @@ p{
         font-weight: 700;
     }
     .intr{
-        @extend %greyBg;
+        
         .title h1,.thumbnail h2{
             color: #fff;
         }
@@ -378,25 +387,25 @@ p{
     @at-root .jumbotron{
         background-color: transparent;
         h2{
-            font-size: 1.125em;font-weight: 700;
+            font-size: 18px;font-weight: 700;
         }
         p{
-            line-height: 2;font-size: .875em;
+            line-height: 2;font-size: 14px;
         }
     }
     .pro .list .thumbnail{
-        padding: .5em 3em;
+        padding: .5rem 3rem;
         p{
             height: 3em;line-height: 1.5;
         }
     }
     @at-root .pro .list .thumbnail{
-        padding: .5em 5em;background-color: transparent;border-radius: 0;
+        padding: .5rem 5rem;background-color: transparent;border-radius: 0;
         p{
             line-height: 2;height: 8em;overflow: hidden;
         }
         .icon{
-            margin: 1.4em auto;
+            margin: 1.4rem auto;
             display: block;
             width: 76px;height: 76px;
             line-height: 76px;
@@ -414,26 +423,26 @@ p{
     }
     @at-root .news{
         h2{
-            font-size:1.14em; font-weight: 500;color: #000;
+            font-size:18px; font-weight: 500;color: #000;
         }
         .date{
             padding: 5px;
             line-height: 1;color: $grey-color-light;
             .day{
                 display: block;
-                font-size: 3em;font-weight: 500;
+                font-size: 36px;font-weight: 500;
             }
         }
         .info{
-            max-height: 3em;overflow: hidden;color: $grey-color-light;
+            @extend %inTwoLine;color: $grey-color-light;line-height: 1.2;
         }
         .lastNews{
             position: relative;
             img{
-                margin-bottom: 1em;
+                margin-bottom: 1rem;
             }
             .date{
-                position: absolute;left: 0;top: 0;font-size: .75em;
+                position: absolute;left: 0;top: 0;font-size: 12px;
                 background-color: rgba(225,74,56,.83);color: #fff;
                 .day{
                     color: #fff;
@@ -443,6 +452,16 @@ p{
         .newsList{
             .line{
                 border-bottom: 1px solid $grey-color-lighter;display: block;
+                &:hover{
+                    @include transition(transform .5s);
+                    @include transform(translateX(30px));
+                    .date{
+                        color: $grey-color;
+                    }
+                    .media-heading{
+                        color: $brand-color;
+                    }
+                }
             }
             .date{
                 width: 80px;
@@ -451,21 +470,28 @@ p{
     }
 }
 .about{
+    .jumbotron{
+        color: #000;
+    }
     .cultrue,.team{
-        padding-top: 2em;
+        padding-top: 2rem;
     }
     .cultrue{
-        padding-bottom: 3em;
-        @extend %greyBg;
+        padding-bottom: 3rem;
+        
+        .row{
+            display:-webkit-flex; 
+        }
         .col2{
-            width:20%;
+            *float: left;
+            *width:20%;
+            flex:1;
             padding-right: 15px;
             padding-left: 15px;
             position: relative;
             min-height: 1px;
-            float: left;
-            span{
-                font-size: 1.5em;margin:0 .5em 1em 0;
+            strong{
+                font-size: 24px;margin:0 .5em 1em 0;
                 background-color: $brand-color; color: #fff;
                 border-radius: 50%;
                 width: 42px;height: 42px;line-height: 42px;text-align: center;display: inline-block;
@@ -475,7 +501,7 @@ p{
     .team{
         margin-bottom: -30px;
         h1{
-            font-size:1.125em;font-weight: 700;
+            font-size:18px;font-weight: 700;
         }
         .teamImg{
             margin: 2em 0 0;
@@ -490,6 +516,50 @@ p{
         }
     }
 }
+.infoBox{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255,.95);
+    color: #000;
+    z-index: 9999;
+    overflow: auto;
+    padding-bottom: 50px;
+    .about{
+        margin-bottom: 50px;
+    }
+    .intr .title h1{
+        color: #000;
+    }
+    @at-root .closeBtn{
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 9999;
+        &:after{
+            content:"X CLOSE";cursor: pointer;
+            display: inline-block;
+            line-height: 2;
+            padding: 5px 10px;
+            margin-top: 1rem;
+            border-radius: 20px 0 0 20px;
+            color: #fff;
+            background-color: #e14a38;
+
+        }
+    }
+    &.intrInfo,&.newsInfo  {
+        text-align: center;
+
+    }
+    .about{
+        text-align: left;
+    }
+
+}
+
 .product{
     .list {
         &>div{
@@ -517,7 +587,7 @@ p{
 #news{
     .newsList{
         &>.row{
-            margin-top: 2em;
+            margin-top: 2rem;
         }
         .img{
             padding: 0;
@@ -526,7 +596,10 @@ p{
 }
 .contact{
     margin-bottom: -30px;
+    .wrapper{
+        padding-bottom: 3em;
+    }
     .code{
-        margin: 1em auto;
+        margin: 1rem auto;
     }
 }

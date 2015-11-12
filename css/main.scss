@@ -49,6 +49,12 @@ $on-laptop:        800px;
   transition:$value;
 }
 
+@mixin transform($value) {
+  -moz-transform:$value;
+  -webkit-transform:$value;
+  transform:$value;
+}
+
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import

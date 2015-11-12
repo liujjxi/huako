@@ -127,10 +127,13 @@ body {
 }
 
 p{
-    font-size: .875em;
+    font-size: .875em;line-height: 2;
 }
 .mb10{
    margin-bottom: 10px; 
+}
+.pt30{
+    padding-top: 30px;
 }
 .o0{
     opacity: 0;
@@ -146,7 +149,7 @@ a {
         // color: darken($brand-color, 15%);
     }
 
-    &:hover {
+    &:focus,&:hover,&.active {
         color: $brand-color;
         text-decoration: none;
     }

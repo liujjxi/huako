@@ -11,6 +11,7 @@ banner: banner01
       <div class="title o0">
         <h1><span class="en">introduction to products</span><br>产品介绍</h1>
       </div> 
+      <a href="javascript:void(0)" class="btn btn-red proTooltip o0">查看更多</a>
       <div class="row list">
       {% for x in (1..4) %}
         <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
@@ -23,9 +24,12 @@ banner: banner01
       {%endfor%}
       </div>
     </div>
+    <div class="proInfo infoBox" hidden>
+
+    </div>
   </div>
   <!-- 关于滑客 -->
-  <div class="intr">
+  <div class="intr greyBg">
     <div class="wrapper">
       <div class="title o0 text-center">
         <h1><span class="en">about  huako</span><br>关于滑客</h1>
@@ -42,6 +46,9 @@ banner: banner01
           <img src="{{site.imgurl}}/aboutImg.png" alt="" class="img-responsive">
         </div>
       </div>
+    </div>
+    <div class="intrInfo infoBox" hidden>
+
     </div>
   </div>
   <!-- 滑客动态 -->
@@ -76,6 +83,9 @@ banner: banner01
           </div>
         </div>
       </div>
+    </div>
+    <div class="newsInfo infoBox" hidden>
+
     </div>
   </div>
 </div>
