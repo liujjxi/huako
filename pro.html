@@ -10,7 +10,7 @@ banner: banner02
     {% for x in (1..6) %}
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 {% cycle 'group3':'bBottom','bLeft bBottom','bBottom','bLeft bBottom','','bLeft '%}">
         <div class="thumbnail">
-           <span class="icon"><img src="{{site.imgurl}}/icon0{{x}}.png" alt=""></span>
+           <span class="icon"><img src="{{site.imgurl | prepend: site.baseurl}}/icon0{{x}}.png" alt=""></span>
            <h2 class="mb10">{% cycle 'group1':'双屏合一','场景购物','免费商城','在线竞拍','精美锁屏','一句话新闻' %}</h2> 
            <p>{% cycle 'group2':'实现了手机屏与电视屏、电脑屏、媒体机（楼宇视频机、壁挂机、户外电子屏）等的实时无缝对接，搭建了用户和电视/电脑/媒体机的桥梁，更加互动、有趣，让人们对感兴趣、有价值信息的获取更加便捷。','全新的购物体验，通过双屏合一实现看电视/电脑/媒体机（楼宇视频机、壁挂机、户外电子屏）时出现的商品（广告等音视频形式）拿出滑客，摇一摇直接购买。','积分商城里大量的实物商品，用户通过日常的使用（签到、解锁屏幕、打电话、抢红包、分享等）获取积分来免费兑换。','通过最新技术开发的线上仿真竞拍，将传统竞拍场景以移动互联网形式体现出来，普通大众也可以享受竞拍的乐趣。','每天不断自动更新的精美壁纸，让每一次打开手机都能焕然一新。','国内独创的一句新闻，通过一句话+精美锁屏壁纸的新闻呈现形式，让看新闻也可以如此便捷、美丽。' %}</p>
         </div>

@@ -7,20 +7,23 @@
 
     {% include header.html %}
 
-    <div class="banner"><img src="{{site.imgurl}}/{{page.banner}}.png" alt="" class="img-responsive"></div>
+    {% if page.banner %}
+    <div class="banner"><img src="{{site.imgurl | prepend: site.baseurl}}/{{page.banner}}.png" alt="" class="img-responsive"></div>
+    {% endif %}
     <div class="page-content">
         {{ content }}
     </div>
 
     {% include footer.html %}
-    <script type="text/javascript" src="{{site.jquery}}"></script>
+    <script type="text/javascript" src="{{site.jquery | prepend: site.baseurl}}"></script>
     <!-- <script type="text/javascript" src="{{site.bs}}/js/bootstrap.min.js"></script> -->
-    <script type="text/javascript" src="{{site.jsurl}}/modernizr.js"></script>
-    <script type="text/javascript" src="{{site.jsurl}}/jquery.waypoints.min.js"></script>
-    <script type="text/javascript" src="{{site.jsurl}}/inview.min.js"></script>
-    <script type="text/javascript" src="{{site.jsurl}}/main.js"></script>
-    <script type="text/javascript" src="{{site.jsurl}}/classie.js"></script>
-    <script type="text/javascript" src="{{site.jsurl}}/header.js"></script>
+    <script type="text/javascript" src="{{site.jsurl | prepend: site.baseurl}}/modernizr.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+    <script type="text/javascript" src="{{site.jsurl | prepend: site.baseurl}}/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" src="{{site.jsurl | prepend: site.baseurl}}/inview.min.js"></script>
+    <script type="text/javascript" src="{{site.jsurl | prepend: site.baseurl}}/main.js"></script>
+    <script type="text/javascript" src="{{site.jsurl | prepend: site.baseurl}}/classie.js"></script>
+    <script type="text/javascript" src="{{site.jsurl | prepend: site.baseurl}}/header.js"></script>
   </body>
 
 </html>

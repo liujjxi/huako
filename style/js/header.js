@@ -2,6 +2,7 @@ var header = (function() {
 
 	var docElem = document.documentElement,
 		header = document.querySelector( '.site-header' ),
+		logo=$('.logo')
 		didScroll = false,
 		changeHeaderOn = 10;
 
@@ -18,9 +19,11 @@ var header = (function() {
 		var sy = scrollY();
 		if ( sy >= changeHeaderOn ) {
 			classie.add( header, 'affix' );
+			logo.attr('src',logo.attr('min-src'));
 		}
 		else {
 			classie.remove( header, 'affix' );
+			logo.attr('src',logo.attr('logo-src'));
 		}
 		didScroll = false;
 	}

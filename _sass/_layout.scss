@@ -55,27 +55,24 @@ d. Default Styles
     font-family:"Microsoft Yahei", SimHei, "Hiragino Sans GB", Tahoma, Arial, Helvetica;
  }
 .site-header {
-    background-color: rgba(255,255,255,0);
-    border-bottom: 1px solid $grey-color-lighter;
+    background-color: $grey-color;
     height: auto;
-    padding: 1em 0;
+    padding: 1em 0 0;
     @include transition(all .3s);
     &.affix{
         width: 100%;height: 82px;z-index: 9999;
         overflow: hidden;background: #fff; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
         .site-title{
-            .logo{
-                display: none;
-            }
-            .logoMin{
-                display: block;
-            }
+            position: absolute;bottom: 0;
             img{
-                max-height: 50px;@include transition(all .3s);
+                max-height: 70px;@include transition(all .3s);
             }
         }
         .site-nav{
             padding-top: 1rem;
+            .page-link{
+                color: $text-color;
+            }
         }
     }
     // Positioning context for the mobile navigation icon
@@ -88,6 +85,7 @@ d. Default Styles
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
+    
     img{
         max-height: 110px;
     }
@@ -95,9 +93,6 @@ d. Default Styles
     &,
     &:visited {
         color: $grey-color-dark;
-    }
-    .logoMin{
-        display: none;
     }
 }
 
@@ -111,7 +106,7 @@ d. Default Styles
     }
 
     .page-link {
-        color: $text-color;
+        color: #fff;
         line-height: $base-line-height;
 
         // Gaps between nav items, but not on the first one
@@ -337,7 +332,7 @@ d. Default Styles
 .greyBg{
     background-color: $grey-color;
     color: #fff;
-    &.wrapper>.title h1{
+    &>.wrapper>.title h2{
         color: #fff;
     }
 }
@@ -359,16 +354,16 @@ p{
 }
 // home
 .home{
-    .intr,.news,.pro{
-        padding-bottom: 3rem;
+    .intr,.news,.pro,.contact{
+        padding-bottom: 4rem;
     }
-    .intr,.news{
-        padding-top: 2rem;
+    .intr,.news,.contact{
+        padding-top: 4rem;
     }
-    @at-root .title h1{
+    @at-root .title h2{
         margin-bottom: 4rem;
     }
-    @at-root .title h1,.thumbnail h2{
+    @at-root .title h2,.thumbnail h2{
         @extend %title;line-height: 1.5em;
     }
     @at-root .title .en{
@@ -376,10 +371,6 @@ p{
         font-weight: 700;
     }
     .intr{
-        
-        .title h1,.thumbnail h2{
-            color: #fff;
-        }
         img{
             margin: 0 auto;
         }
@@ -451,7 +442,7 @@ p{
         }
         .newsList{
             .line{
-                border-bottom: 1px solid $grey-color-lighter;display: block;
+                border-bottom: 1px solid $grey-color-lighter;display: block;cursor: pointer;
                 &:hover{
                     @include transition(transform .5s);
                     @include transform(translateX(30px));
@@ -527,10 +518,16 @@ p{
     z-index: 9999;
     overflow: auto;
     padding-bottom: 50px;
+    @include transition(all .5s);
+    &.midCenter{
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
     .about{
         margin-bottom: 50px;
     }
-    .intr .title h1{
+    .intr .title h2{
         color: #000;
     }
     @at-root .closeBtn{
@@ -594,6 +591,13 @@ p{
         }
     }
 }
+.newsInfo{
+    .title{
+        h2{
+            font-size:30px;
+        }
+    }
+}
 .contact{
     margin-bottom: -30px;
     .wrapper{
@@ -602,4 +606,22 @@ p{
     .code{
         margin: 1rem auto;
     }
+}
+
+//地图
+.iw_poi_title {
+    color: #CC5522;
+    font-size: 14px;
+    font-weight: bold;
+    overflow: hidden;
+    padding-right: 13px;
+    white-space: nowrap
+}
+
+.iw_poi_content {
+    font: 12px arial, sans-serif;
+    overflow: visible;
+    padding-top: 4px;
+    white-space: -moz-pre-wrap;
+    word-wrap: break-word
 }

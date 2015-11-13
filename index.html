@@ -9,7 +9,7 @@ banner: banner01
   <div class="pro text-center">
     <div class="wrapper">
       <div class="title o0">
-        <h1><span class="en">introduction to products</span><br>产品介绍</h1>
+        <h2><span class="en">introduction to products</span><br>产品介绍</h2>
       </div> 
       <a href="javascript:void(0)" class="btn btn-red proTooltip o0">查看更多</a>
       <div class="row list">
@@ -24,7 +24,7 @@ banner: banner01
       {%endfor%}
       </div>
     </div>
-    <div class="proInfo infoBox" hidden>
+    <div class="proInfo infoBox hide" >
 
     </div>
   </div>
@@ -32,7 +32,7 @@ banner: banner01
   <div class="intr greyBg">
     <div class="wrapper">
       <div class="title o0 text-center">
-        <h1><span class="en">about  huako</span><br>关于滑客</h1>
+        <h2><span class="en">about  huako</span><br>关于滑客</h2>
       </div> 
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -47,7 +47,7 @@ banner: banner01
         </div>
       </div>
     </div>
-    <div class="intrInfo infoBox" hidden>
+    <div class="intrInfo infoBox hide" >
 
     </div>
   </div>
@@ -55,7 +55,7 @@ banner: banner01
   <div class="news">
     <div class="wrapper">
       <div class="title o0 text-center">
-        <h1><span class="en">huako news</span><br>滑客动态</h1>
+        <h2><span class="en">huako news</span><br>滑客动态</h2>
       </div> 
       <div class="row line">
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -84,8 +84,46 @@ banner: banner01
         </div>
       </div>
     </div>
-    <div class="newsInfo infoBox" hidden>
+    <div class="newsInfo infoBox hide" >
 
     </div>
+  </div>
+  <!-- 联系我们 -->
+  <div class="contact greyBg">
+    <div class="wrapper">
+      <div class="title o0 text-center">
+        <h2><span class="en">Contact us</span><br>联系我们</h2>
+      </div> 
+      <div class="row line">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div style="width:100%;height:270px;" id="dituContent" class="map"></div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div class="address">
+            <div class="col-xs-12">
+                <address>
+                    <abbr title="Phone">电话：</abbr> 0731—82808080
+                    <br>
+                    <abbr title="address">地址：</abbr> 湖南省长沙市高新区尖山路39号中电软件园总部大楼607—610
+                    <br>
+                </address>
+            </div>
+            <div class="col-xs-6">
+                <dl class="text-center">
+                    <dd><img src="{{site.imgurl | prepend: site.baseurl}}/weiboCode.png" alt="" class="code img-responsive"></dd>
+                    <dt>滑客官方微博</dt>
+                </dl>
+            </div>
+            <div class="col-xs-6">
+                <dl class="text-center mb10">
+                    <dd><img src="{{site.imgurl | prepend: site.baseurl}}/weixinCode.png" alt="" class="code img-responsive"></dd>
+                    <dt>滑客微信公众号</dt>
+                </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>

@@ -1,6 +1,6 @@
  <div id="preloader">      
     <div id="status">
-       <img src="{{site.imgurl}}/preloader.gif" height="64" width="64" alt="">
+       <img src="{{site.imgurl | prepend: site.baseurl}}/preloader.gif" height="64" width="64" alt="">
     </div>
  </div>
 
@@ -12,9 +12,9 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ site.baseurl }}/" title="{{ site.title }}">
-    <img class="logo" src="{{site.imgurl}}/logo.png" alt="湖南滑客网络科技有限公司" class="img-responsive">
-    <img class="logoMin" src="{{site.imgurl}}/logoMin.png" alt="湖南滑客网络科技有限公司" class="img-responsive">
+    <a class="site-title" href="{{ site.baseurl }}" title="{{ site.title }}">
+    <img class="logo" src="{{site.imgurl | prepend: site.baseurl}}/logo.png" logo-src="{{site.imgurl | prepend: site.baseurl}}/logo.png" min-src="{{site.imgurl | prepend: site.baseurl}}/logoMin.png" alt="湖南滑客网络科技有限公司" class="img-responsive">
+    <!-- <img class="logoMin" src="{{site.imgurl | prepend: site.baseurl}}/logoMin.png" alt="湖南滑客网络科技有限公司" class="img-responsive"> -->
     </a>
 
     <nav class="site-nav">
@@ -29,7 +29,7 @@
       <div class="trigger">
         {% for page in site.pages %}
           {% if page.title %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}" >{{ page.title }}</a>
+          <a class="page-link" href="{{ page.url }}" >{{ page.title }}</a>
           {% endif %}
         {% endfor %}
       </div>
