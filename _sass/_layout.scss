@@ -592,9 +592,20 @@ p{
     }
 }
 .newsInfo{
-    .title{
+    .title.line{
+        @extend %title;
+        padding-bottom: 0;
         h2{
             font-size:30px;
+        }
+    }
+    .date{
+        font-size: 12px;
+    }
+    .content{
+        min-height: 700px;text-align: center;
+        p{
+            text-indent: 2em;margin: 1em 0;text-align: left;
         }
     }
 }
