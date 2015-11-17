@@ -17,47 +17,52 @@
 	  	// will fade out the whole DIV that covers the website. 
 	  	$("#preloader").delay(500).fadeOut("slow").remove();     
 	    
-	  	$('.js .home .pro .thumbnail').addClass("animated fadeInUp show"); 
-	    // $('.js .home .pro .icon').addClass("animated shake"); 
+	  	$('.js.cssanimations .pro .thumbnail').addClass("animated fadeInUp show"); 
+	  	$('.js.cssanimations .banner').addClass("animated pulse "); 
+	    // $('.js.cssanimations .home .pro .icon').addClass("animated shake"); 
 
 
   /*----------------------------------------------------*/
 	/* Waypoints Animations
  ------------------------------------------------------ */  
- 		if($('.js .home').length==1){
-			var pro = new Waypoint.Inview({
-			  element: $('.js .pro'),
+ 		if($('.js.cssanimations .intr').length!=0){
+			/*var pro = new Waypoint.Inview({
+			  element: $('.js.cssanimations .pro'),
 			  entered: function(direction) {
 			  	if(direction=='down'){
 			  		$('.proTooltip').addClass( 'animated fadeInUp show');
 			  	}
 			  	
 			  }
-			});
+			});*/
 
 			var intr = new Waypoint.Inview({
-			  element: $('.js .intr'),
+			  element: $('.js.cssanimations .intr'),
 			  entered: function(direction) {
-			    $('.js .intr img').addClass( 'animated pulse' );  
+			    $('.js.cssanimations .intr img').addClass( 'animated pulse' );  
 			  }
 			});
-
+		}
+ 		if($('.js.cssanimations .news').length!=0){
 			var news = new Waypoint.Inview({
-			  element: $('.js .news'),
+			  element: $('.js.cssanimations .news'),
 			  enter: function(direction) {
-			    $('.js .news .lastNews').addClass( 'animated fadeInLeft show' );  
-			    $('.js .news .newsList').addClass( 'animated fadeInRight show' );  
+			    $('.js.cssanimations .news .lastNews').addClass( 'animated fadeInLeft show' );  
+			    $('.js.cssanimations .news .newsList').addClass( 'animated fadeInRight show' );  
 			  }
 			});
+		}
+ 		if($('.js.cssanimations .contact').length!=0){
 			var contact = new Waypoint.Inview({
-			  element: $('.js .contact'),
+			  element: $('.js.cssanimations .contact'),
 			  enter: function(direction) {
-			    $('.js .contact .map').addClass( 'animated fadeInLeftBig show' );  
-			    $('.js .contact .address').addClass( 'animated fadeInRightBig show' );  
+			    $('.js.cssanimations .contact .map').addClass( 'animated fadeInLeftBig show' );  
+			    $('.js.cssanimations .contact .address').addClass( 'animated fadeInRightBig show' );  
 			  }
 			});
-
-			$('.title').each(function(index,element){
+		}
+ 		if($('.js.cssanimations .title').length!=0){
+			$('.js.cssanimations .title').each(function(index,element){
 				var title = new Waypoint.Inview({
 				  element: element,
 				  enter: function(direction) {
@@ -71,17 +76,17 @@
 
 	/*---------------------------------------------------- */
 	/* ajax 加载
-  ------------------------------------------------------ */ 
+  ------------------------------------------------------ 
 
 
   	//pro
-		openInfo($('.js .pro .thumbnail,.proTooltip'),$('.proInfo'),'pros','.product',true)
+		openInfo($('.js.cssanimations .pro .thumbnail,.proTooltip'),$('.proInfo'),'pros','.product',true)
 
 		//intr
-		openInfo($('.js .intr .btn'),$('.intrInfo'),'about','.about',false)
+		openInfo($('.js.cssanimations .intr .btn'),$('.intrInfo'),'about','.about',false)
 		
 		//news
-		openInfo($('.js .news .btn'),$('.newsInfo'),'news','.news',true)
+		openInfo($('.js.cssanimations .news .btn'),$('.newsInfo'),'news','.news',true)
 		
 		
 		function closeInfo(btn){
@@ -138,6 +143,7 @@
 			});
 
   	}
+  	*/ 
 	/*---------------------------------------------------- */
 	/* baidu map
   ------------------------------------------------------ */ 

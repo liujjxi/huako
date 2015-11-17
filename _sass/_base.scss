@@ -107,7 +107,7 @@ table {
    box-sizing: border-box;
 }
 
-html { font-size: 62.5%; }
+html { font-size: 87.5%; }
 
 body {
    background: #fff;
@@ -115,7 +115,7 @@ body {
    font-weight: normal;
    font-size: 16px;
    line-height: 1.5;
-   color: #838C95;
+   color: #454545;
 
    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
    -webkit-text-size-adjust: 100%;
@@ -132,11 +132,14 @@ p{
 .mb10{
    margin-bottom: 10px; 
 }
+.pb10{
+    padding-bottom: 10px;
+}
 .pt30{
     padding-top: 30px;
 }
-.o0{
-    opacity: 0;
+.cssanimations .o0{
+    @include opacity(0);
 }
 /**
  * Links
@@ -209,6 +212,7 @@ pre {
  * Wrapper
  */
 .wrapper {
+    max-width: $content-width;
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
     margin-right: auto;

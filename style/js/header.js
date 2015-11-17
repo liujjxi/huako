@@ -1,18 +1,20 @@
 var header = (function() {
 
 	var docElem = document.documentElement,
-		header = document.querySelector( '.site-header' ),
+		header = document.querySelector( '.js.cssanimations .site-header' ),
 		logo=$('.logo')
 		didScroll = false,
 		changeHeaderOn = 10;
 
 	function init() {
-		window.addEventListener( 'scroll', function( event ) {
-			if( !didScroll ) {
-				didScroll = true;
-				setTimeout( scrollPage, 0 );
-			}
-		}, false );
+		if(header!=null){
+			window.addEventListener( 'scroll', function( event ) {
+				if( !didScroll ) {
+					didScroll = true;
+					setTimeout( scrollPage, 0 );
+				}
+			}, false );
+		}
 	}
 
 	function scrollPage() {

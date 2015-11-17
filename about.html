@@ -2,7 +2,7 @@
 layout: default
 title: 企业风采
 permalink: /about/
-banner: banner02
+banner: banner03
 ---
 
 <div class="about">
@@ -10,7 +10,7 @@ banner: banner02
   <div class="intr">
     <div class="wrapper">
       <div class="title text-center">
-        <h1 class="line"><span class="en">company profiles</span><br>企业简介</h1>
+        <h2 class="line"><span class="en">company profiles</span><br>企业简介</h2>
       </div> 
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -29,18 +29,15 @@ banner: banner02
   <div class="cultrue greyBg">
     <div class="wrapper">
       <div class="title text-center">
-        <h1><span class="en">corporate culture</span><br>企业文化</h1>
+        <h2><span class="en">corporate culture</span><br>企业文化</h2>
       </div> 
       <div class="row">
       {% for x in (1..5) %}
         <div class="col2">
         	<dl>
-        		<dt><strong>比</strong><span class="hidden-xs">是基础</span></dt>
-        		<dd class="hidden-sm hidden-xs">
-							同标杆比<br>
-							找出差距<br>
-							差距就是矛盾<br>
-							敢于揭露工作中的矛盾
+        		<dt><strong>{% cycle 'group1':'比','学','赶','帮','超'%}</strong></dt>
+        		<dd class="hidden-lg">
+            {% cycle 'group2':'比是基础<br> 同标杆比，找出差距，差距就是矛盾，敢于揭露工作中的矛盾','学是核心<br>知其不足学而补短，明确努力的方向','赶是关键<br>学以致用追赶标杆，清楚目标距离，消灭差距，达到标杆的水平','帮是方法<br>乐于助人携手并进，实现自身价值，创造团队荣耀','超是目标<br>全新提高，超过标杆超越自我'%}
         		</dd>
         	</dl>
         </div>
@@ -52,11 +49,11 @@ banner: banner02
   <div class="team">
     <div class="wrapper">
       <div class="title text-center">
-        <h1 class="line"><span class="en">team's mien</span><br>团队风采</h1>
+        <h2 class="line"><span class="en">team's mien</span><br>团队风采</h2>
       </div> 
       <div class="row">
         <div class="col-md-12 ">
-          <h1 class="redColor mb10">总裁介绍：</h1>
+          <h2 class="redColor mb10">总裁介绍：</h2>
           <p><strong>关键词：</strong>正直，睿智，健谈，执着</p>
 					<p><strong>创业诀窍：</strong>不忘初心，保持赤诚，加强学习，赢得成功。</p>
 					<p><strong>媒体报道：</strong>一个退伍老兵的“移动互联网+”</p>
