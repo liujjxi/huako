@@ -18,7 +18,7 @@
 	  	$("#preloader").delay(500).fadeOut("slow").remove();     
 	    
 	  	$('.js.cssanimations .pro .thumbnail').addClass("animated fadeInUp show"); 
-	  	$('.js.cssanimations .banner').addClass("animated pulse "); 
+	  	$('.js.cssanimations .banner').addClass("animated fadeInLeft show "); 
 	    // $('.js.cssanimations .home .pro .icon').addClass("animated shake"); 
 
 
@@ -66,7 +66,7 @@
 				var title = new Waypoint.Inview({
 				  element: element,
 				  enter: function(direction) {
-				    $('.title').eq(index).addClass( 'animated fadeIn' );  
+				    $('.title').eq(index).addClass( 'animated fadeInUp' );  
 				  }
 				});
 

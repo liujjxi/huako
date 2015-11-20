@@ -8,14 +8,14 @@
     {% include header.html %}
 
     {% if page.banner %}
-    <div class="banner"><img src="{{site.imgurl | prepend: site.baseurl}}/{{page.banner}}.png" alt="" class="img-responsive"></div>
+    <div class="banner o0"><img src="{{site.imgurl | prepend: site.baseurl}}/{{page.banner}}.png" alt="" class="img-responsive"></div>
     {% endif %}
     <div class="page-content">
         {{ content }}
     </div>
 
     {% include footer.html %}
-    <script type="text/javascript" src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="{{site.jquery | prepend: site.baseurl}}"></script>
     <script type="text/javascript" src="{{site.jsurl | prepend: site.baseurl}}/modernizr.js"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
     <script type="text/javascript" src="{{site.jsurl | prepend: site.baseurl}}/jquery.waypoints.min.js"></script>

@@ -7,7 +7,7 @@ baseurl: "/" # the subpath of your site, e.g. /blog/
 imgurl: "style/images"
 jsurl: "style/js"
 cssurl: "css/"
-jquery: "bower_components/jquery/dist/jquery.min.js"
+jquery: "bower_components/jquery/dist/jquery1.11.3.min.js"
 bs: "bower_components/bootstrap/dist/"
 url: "http://huako.cn" # the base hostname & protocol for your site
 copyright: "Copyright  ©  2015  www.huako.cn  湖南滑客网络科技有限公司   版权所有"

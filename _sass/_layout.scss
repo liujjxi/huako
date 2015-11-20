@@ -137,7 +137,7 @@ d. Default Styles
 
 .site-nav {
     float: right;
-    padding-top: 1em;
+    padding: 1em;
 
     .menu-icon {
         display: none;
@@ -443,7 +443,7 @@ p{
     @at-root .pro .list .thumbnail{
         padding: .5rem 5rem;background-color: transparent;border-radius: 0;
         p{
-            line-height: 2;height: 8em;overflow: hidden;
+            line-height: 2;height: 10em;overflow: hidden;text-align: justify;
         }
         .icon{
             margin: 20px auto;
@@ -580,13 +580,11 @@ p{
                     }
                    
                     dt{
-                        -webkit-animation-name: zoomOut;
-                        animation-name: zoomOut;
+                        @include animationName(zoomOut);
                         // display: none;
                     }
                     .hidden-lg{
-                        -webkit-animation-name: zoomIn;
-                        animation-name: zoomIn;
+                        @include animationName(zoomIn);
                         margin-top: 0;
                         display: block !important;position: absolute;top: 0;left: 0;text-align: left;
                         border:2px dotted #fff; padding: 1em;border-radius: 1em;
@@ -644,6 +642,7 @@ p{
         .teamImg{
             margin: 2em 0 0;position: relative;
             &>div{
+                overflow: hidden;
                 &::before{
                     display: block;cursor: pointer;
                     content: "";
@@ -653,6 +652,10 @@ p{
                 &:hover{
                     &::before{
                         background: rgba(0,0,0,.4);
+                    }
+                    img{
+                        @extend %animated;
+                        @include animationName(pulse);
                     }
                 }
             }
