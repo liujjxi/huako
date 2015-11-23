@@ -443,7 +443,7 @@ p{
     @at-root .pro .list .thumbnail{
         padding: .5rem 5rem;background-color: transparent;border-radius: 0;
         p{
-            line-height: 2;height: 10em;overflow: hidden;text-align: justify;
+            line-height: 2;height: 10em;overflow: hidden;
         }
         .icon{
             margin: 20px auto;
@@ -646,8 +646,8 @@ p{
                 &::before{
                     display: block;cursor: pointer;
                     content: "";
-                    position: absolute;left: 0;top: 0;
-                    width: 100%;height: 100%;background: transparent url(#{$img-url}/screen.png) repeat 0 0;
+                    position: absolute;left: 0;top: 0;@include transition(background 2s);
+                    width: 100%;height: 100%;background: transparent url(#{$img-url}/screen.png) repeat 0 0;z-index: 9;
                 }
                 &:hover{
                     &::before{
@@ -655,7 +655,7 @@ p{
                     }
                     img{
                         @extend %animated;
-                        @include animationName(pulse);
+                        @include animationName(scaleIn);
                     }
                 }
             }
